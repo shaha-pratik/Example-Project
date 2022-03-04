@@ -19,7 +19,10 @@ target_link_libraries(${This} calculator)
 # Starting the testing framework
 enable_testing()
 
+## Feching the googletest
+## Using the local repository
 # add_subdirectory(third_party/googletest)
+## Using the fetch mechanism in cmake from github
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -28,12 +31,14 @@ FetchContent_Declare(
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
-set(Sources 
+
+# Creating the test executable
+set(Sources
     test/calculator_test.cpp
 )
 add_executable(${ThisTest} ${Sources})
 
-target_link_libraries(${ThisTest} 
+target_link_libraries(${ThisTest}
   gtest_main
   calculator
 )

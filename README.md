@@ -56,3 +56,12 @@ Once Code is open in the devcontainer then open the terminal in the vscode and r
 * `./build.sh`: To build the code and get the executable for the test file. It will create the build folder and inside which it will create all the library and executables.
 * `./test.sh`: To execute the test cases.
 * `./coverage.sh`: To run the coverage and it will store inside the `build/report` and can view opening the `build/report/index.html`
+
+**Note**: By default, googletest repo is fetched from the github.com in [CMakeLists.txt](CMakeLists.txt#23) but if user want to use the repo from the local folder then user can uncomment the subrepository and comment fetching the code from the github.
+
+And needs to update the submodule for the googletest
+
+```shell
+git submodule update --init --recursive
+git submodule update --rebase --remote
+```
