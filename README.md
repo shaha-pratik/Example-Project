@@ -1,8 +1,8 @@
 # CPP Project with CMake and Gtest
 
-![Visits Badge](https://badges.pufler.dev/visits/simorgh1/vscode-dev-containers)
-[![GitHub license](https://img.shields.io/github/license/simorgh1/vscode-dev-containers)](https://github.com/simorgh1/vscode-dev-containers/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/simorgh1/vscode-dev-containers)](https://github.com/simorgh1/vscode-dev-containers/stargazers)
+![Visits Badge](https://badges.pufler.dev/visits/shaha-pratik/Example-Project)
+[![GitHub license](https://img.shields.io/github/license/shaha-pratik/Example-Project)](https://github.com/shaha-pratik/Example-Project/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/shaha-pratik/Example-Project)](https://github.com/shaha-pratik/Example-Project/stargazers)
 
 ## Introduction
 
