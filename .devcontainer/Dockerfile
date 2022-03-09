@@ -8,10 +8,14 @@ FROM mcr.microsoft.com/vscode/devcontainers/cpp:0-${VARIANT}
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends lcov \
     libssl-dev \
+    python3 \
+    python3-pip \
+    clang-format \
+    && pip3 install pre-commit \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-ARG version="3.22"
-ARG build="2"
-RUN mkdir ~/temp && cd ~/temp && wget https://cmake.org/files/v$version/cmake-$version.$build.tar.gz \
-    && tar -xzvf cmake-$version.$build.tar.gz && cd cmake-$version.$build/ && ./bootstrap && make -j$(nproc) \
-    && make install && cd .. && rm -rf cmake-$version.$build/
+ARG CAMKE_VERSION="3.22"
+ARG CMAKE_VERSION_BUILD="2"
+RUN mkdir ~/temp && cd ~/temp && wget https://cmake.org/files/v$CAMKE_VERSION/cmake-$CAMKE_VERSION.$CMAKE_VERSION_BUILD.tar.gz \
+    && tar -xzvf cmake-$CAMKE_VERSION.$CMAKE_VERSION_BUILD.tar.gz && cd cmake-$CAMKE_VERSION.$CMAKE_VERSION_BUILD/ && ./bootstrap && make -j$(nproc) \
+    && make install && cd .. && rm -rf cmake-$CAMKE_VERSION.$CMAKE_VERSION_BUILD/

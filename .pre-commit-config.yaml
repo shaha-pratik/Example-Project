@@ -30,3 +30,9 @@ repos:
     rev: v0.1.0
     hooks:
       - id: dockerfilelint
+
+  # - repo: https://github.com/pocc/pre-commit-hooks
+  #   rev: master
+  #   hooks:
+  #     - id: clang-format
+  #       args: [-i]
