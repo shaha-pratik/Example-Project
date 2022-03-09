@@ -6,4 +6,4 @@ int main(int argc, char* argv[]) {
     Calculator calc;
     std::cout << "4 + 5 = " << calc.add(4, 5) << std::endl;
     return 1;
-} 
+}

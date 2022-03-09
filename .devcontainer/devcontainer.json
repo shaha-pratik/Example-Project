@@ -1,62 +1,60 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.224.2/containers/cpp
 {
-	"name": "C++",
-	"build": {
-		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick an Debian / Ubuntu OS version: debian-11, debian-10, debian-9, ubuntu-21.04, ubuntu-20.04, ubuntu-18.04
-		// Use Debian 11, Debian 9, Ubuntu 18.04 or Ubuntu 21.04 on local arm64/Apple Silicon
-		"args": { "VARIANT": "ubuntu-18.04" }
-	},
-	"runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
+  "name": "C++",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick an Debian / Ubuntu OS version: debian-11, debian-10, debian-9, ubuntu-21.04, ubuntu-20.04, ubuntu-18.04
+    // Use Debian 11, Debian 9, Ubuntu 18.04 or Ubuntu 21.04 on local arm64/Apple Silicon
+    "args": { "VARIANT": "ubuntu-18.04" }
+  },
+  "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
 
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"editor.minimap.enabled": false,
-		"explorer.openEditors.visible": 0,
-		"window.zoomLevel": 0,
-		"files.autoSave": "afterDelay",
-		"editor.formatOnPaste": true,
-		"editor.cursorBlinking": "solid",
-		"files.trimFinalNewlines": true,
-		"editor.tabSize": 4,
-		"editor.rulers": [
-			120
-		],
-		"files.insertFinalNewline": true,
-		"files.trimTrailingWhitespace": true,
-		"[markdown]": {
-			"files.trimTrailingWhitespace": false
-		},
-		"extensions.ignoreRecommendations": true,
-		"window.title": "${activeEditorLong}",
-		"gitlens.advanced.messages": {
-			"suppressFileNotUnderSourceControlWarning": true
-		},
-		"telemetry.enableTelemetry": "off",
-		"editor.formatOnSave": true,
-	},
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "editor.minimap.enabled": false,
+    "explorer.openEditors.visible": 0,
+    "window.zoomLevel": 0,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnPaste": true,
+    "editor.cursorBlinking": "solid",
+    "files.trimFinalNewlines": true,
+    "editor.tabSize": 4,
+    "editor.rulers": [120],
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
+    "extensions.ignoreRecommendations": true,
+    "window.title": "${activeEditorLong}",
+    "gitlens.advanced.messages": {
+      "suppressFileNotUnderSourceControlWarning": true
+    },
+    "telemetry.enableTelemetry": "off",
+    "editor.formatOnSave": true
+  },
 
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"ms-vscode.cpptools",
-		"ms-vscode.cmake-tools",
-		"ms-vscode.cpptools-extension-pack",
-		"austin.code-gnu-global",
-		"eamodio.gitlens",
-		"gitkraken.gitkraken-authentication",
-		"bierner.markdown-preview-github-styles",
-		"DavidAnson.vscode-markdownlint",
-		"shd101wyy.markdown-preview-enhanced",
-		"yzhang.markdown-all-in-one",
-	],
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.cpptools-extension-pack",
+    "austin.code-gnu-global",
+    "eamodio.gitlens",
+    "gitkraken.gitkraken-authentication",
+    "bierner.markdown-preview-github-styles",
+    "DavidAnson.vscode-markdownlint",
+    "shd101wyy.markdown-preview-enhanced",
+    "yzhang.markdown-all-in-one"
+  ],
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "gcc -v",
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "gcc -v",
 
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
 }
