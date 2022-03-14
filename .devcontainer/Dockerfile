@@ -11,7 +11,10 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     python3 \
     python3-pip \
     clang-format \
-    && pip3 install pre-commit \
+    && pip3 install --upgrade setuptools \
+    && pip3 install --upgrade pip \
+    && pip3 install --ignore-installed PyYAML \
+    && pip3 install pre-commit pandas numpy\
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ARG CAMKE_VERSION="3.22"

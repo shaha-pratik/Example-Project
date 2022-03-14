@@ -39,3 +39,4 @@ build
 *.vsix
 .history
 .ionide
+.DS_Store
