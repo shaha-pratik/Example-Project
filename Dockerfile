@@ -10,12 +10,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     libssl-dev \
     python3 \
     python3-pip \
+    python3-setuptools \
+    cmake \
     clang-format \
     && pip3 install pre-commit \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
-
-ARG CAMKE_VERSION="3.22"
-ARG CMAKE_VERSION_BUILD="2"
-RUN mkdir ~/temp && cd ~/temp && wget https://cmake.org/files/v$CAMKE_VERSION/cmake-$CAMKE_VERSION.$CMAKE_VERSION_BUILD.tar.gz \
-    && tar -xzvf cmake-$CAMKE_VERSION.$CMAKE_VERSION_BUILD.tar.gz && cd cmake-$CAMKE_VERSION.$CMAKE_VERSION_BUILD/ && ./bootstrap && make -j$(nproc) \
-    && make install && cd .. && rm -rf cmake-$CAMKE_VERSION.$CMAKE_VERSION_BUILD/
